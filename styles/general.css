@@ -1,1 +1,340 @@
-/*# sourceMappingURL=general.css.map */
+.navbar {
+  position: fixed;
+  background-color: rgba(123, 123, 123, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  max-width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.left-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.name-logo {
+  font-size: 2.5vw;
+  color: white;
+  font-family: Poppins, Century Gothic;
+  margin-left: 120px;
+}
+
+.nav-right-section {
+  cursor: pointer;
+}
+.nav-right-section div:hover {
+  color: rgb(99, 98, 98);
+  transition: color 0.2s;
+}
+
+.nav-left-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 100px;
+  width: 500px;
+  color: white;
+  font-size: 18px;
+}
+.nav-left-section div:hover {
+  color: rgb(99, 98, 98);
+  transition: color 0.2s;
+}
+
+#phone-icon,
+#user-icon,
+#chip-icon,
+#rocket-icon {
+  margin-right: 6px;
+}
+
+.background-container {
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  opacity: 0.9;
+}
+
+.introduction-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4vw;
+  font-family: Poppins;
+  text-align: center;
+  font-style: italic;
+  line-height: 100%;
+}
+
+.introduction-part2 {
+  font-size: 2vw;
+  font-style: normal;
+  font-family: Didact Gothic;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-container {
+  border-top: 1px solid rgb(82, 81, 81);
+  margin-top: 30px;
+  width: 90%;
+  padding-bottom: 50px;
+}
+
+.projects-title {
+  margin-top: 45px;
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.extra-info {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+.projects-flexbox {
+  display: flex;
+  margin-top: 70px;
+  margin-left: 80px;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0px;
+  border: 1px solid black;
+  box-shadow: -10px 5px 10px gray;
+  border-radius: 5px;
+  transition: top ease 0.5s;
+}
+.quiz-container:hover {
+  top: -20px;
+}
+.quiz-container .quiz-description {
+  padding: 10px;
+  margin-left: 10px;
+  font-family: Didact Gothic;
+}
+.quiz-container .list-languages {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-family: Roboto;
+}
+.quiz-container .list-languages .programming-lang {
+  margin-left: 15px;
+  background-color: rgb(90, 88, 88);
+  padding: 6px;
+  border-radius: 10%;
+  color: white;
+}
+.quiz-container .learn-more-section {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-top: 1px solid gray;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.quiz-container .learn-more-section .learn-more-button {
+  background-color: #343a40;
+  padding: 6px;
+  color: white;
+  cursor: pointer;
+  font-family: Century Gothic;
+}
+.quiz-container .learn-more-section .learn-more-button:hover {
+  background-color: #6c757d;
+}
+
+.quiz-img {
+  width: 100%;
+  height: auto;
+}
+
+.about-container {
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  position: relative;
+  margin-top: 200px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  border: 10px solid white;
+  width: 100%;
+  height: auto;
+}
+
+.about-left-section {
+  flex: 1;
+  max-width: 250px;
+  margin-left: 100px;
+}
+
+.about-right-section {
+  flex: 1;
+  margin-right: 70px;
+  margin-top: -250px;
+}
+.about-right-section .about-me-title {
+  color: white;
+  font-size: 3.5vw;
+  font-family: Poppins;
+  font-weight: bold;
+  text-align: center;
+}
+.about-right-section .about-me-text {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 50px;
+  margin-right: 80px;
+  color: white;
+  font-size: 1vw;
+  font-family: Century Gothic;
+  text-align: justified;
+}
+
+.skills-container {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  flex-direction: column;
+}
+.skills-container .skills-title {
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+  font-family: Inder, Century Gothic;
+}
+
+.skills-flexbox {
+  display: flex;
+  flex: 1;
+  height: 320px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+.skill-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 55px;
+  flex: 1;
+}
+
+.skills-circle {
+  border: 2px inset #000000;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: rgb(242, 242, 242);
+}
+
+.skills-image {
+  width: 100%;
+  height: auto;
+}
+
+.skills-icon-title {
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: Didact Gothic, Century Gothic;
+  text-align: center;
+}
+
+.footer-container {
+  height: 130px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.footer-container .contacts-icon-frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(152, 152, 152, 0.8);
+  transition: color 0.3s ease;
+}
+.footer-container .contacts-icon-frame .footer-icon-container {
+  border: 2px solid gray;
+  margin: 10px;
+  padding: 3px;
+}
+.footer-container .clouds {
+  font-size: 13px;
+  margin-top: 5px;
+}
+.footer-container .copyright {
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+#github-icon,
+#linkedin-icon,
+#email-icon,
+#twitter-icon {
+  color: rgba(152, 152, 152, 0.8);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+#github-icon:hover,
+#linkedin-icon:hover,
+#email-icon:hover,
+#twitter-icon:hover {
+  color: white;
+}
+
+body {
+  font-family: Century Gothic, Helvetica;
+  padding-top: 70px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+@media (max-width: 1200px) {
+  .about-left-section {
+    max-width: 150px;
+  }
+}/*# sourceMappingURL=general.css.map */

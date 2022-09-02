@@ -1,0 +1,22 @@
+@use "header";
+@use "main";
+@use "footer";
+
+$fontstack1: Century Gothic, Helvetica;
+
+body {
+  font-family: $fontstack1;
+  padding-top: 70px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+@media (max-width: 1200px) {
+  .about-left-section {
+    max-width: 150px;
+  }
+}

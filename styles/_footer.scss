@@ -1,0 +1,48 @@
+$iconcolor: rgba(152, 152, 152, 0.8);
+
+.footer-container {
+  height: 130px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  .contacts-icon-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $iconcolor;
+    transition: color 0.3s ease;
+
+    .footer-icon-container {
+      border: 2px solid gray;
+      margin: 10px;
+      padding: 3px;
+    }
+  }
+
+  .clouds {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+  .copyright {
+    margin-top: 6px;
+    font-size: 15px;
+  }
+}
+
+#github-icon,
+#linkedin-icon,
+#email-icon,
+#twitter-icon {
+  color: $iconcolor;
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
+}
