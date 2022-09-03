@@ -46,6 +46,9 @@
   color: white;
   font-size: 18px;
 }
+.nav-left-section div {
+  height: 20px;
+}
 .nav-left-section div:hover {
   color: rgb(99, 98, 98);
   transition: color 0.2s;
@@ -56,6 +59,19 @@
 #chip-icon,
 #rocket-icon {
   margin-right: 6px;
+}
+
+header nav div div div.active {
+  color: rgb(99, 98, 98);
+  transition: color 0.2s;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+header nav div div div.name-logo.active {
+  background-color: rgba(123, 123, 123, 0);
+  color: white;
 }
 
 .background-container {
@@ -125,7 +141,7 @@
   border: 1px solid black;
   box-shadow: -10px 5px 10px gray;
   border-radius: 5px;
-  transition: top ease 0.5s;
+  transition: top ease-in-out 1.5s;
 }
 .quiz-container:hover {
   top: -20px;
@@ -167,6 +183,97 @@
 }
 .quiz-container .learn-more-section .learn-more-button:hover {
   background-color: #6c757d;
+}
+
+.popup-container {
+  top: 140%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 25%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.projects-popup {
+  z-index: 200;
+  width: 800px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.popup-container.show {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity linear 0.5s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+  z-index: 200;
+}
+
+.popup-body {
+  width: 100%;
+  font-family: Poppins;
+  text-align: justify;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  border-top: 1px solid gray;
+  padding: 5px;
+}
+.popup-footer #github-icon-popup {
+  color: black;
+}
+.popup-footer #github-icon-popup:hover {
+  color: rgb(99, 98, 98);
+}
+.popup-footer .popup-close.footer {
+  color: white;
+  background-color: rgb(99, 98, 98);
+  border-radius: 4px;
+  width: 60px;
+}
+.popup-footer .popup-close.footer:hover {
+  background-color: rgba(99, 98, 98, 0.5);
+}
+
+.popup-header {
+  margin-bottom: 20px;
+  font-size: 25px;
+  height: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  margin-top: -15px;
+}
+.popup-header .popup-close.header {
+  background-color: rgb(216, 59, 59);
+  color: white;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.popup-header .popup-close.header:hover {
+  background-color: rgba(216, 59, 59, 0.5);
+}
+
+.popup-images {
+  width: 100%;
+  height: 450px;
 }
 
 .quiz-img {
@@ -224,7 +331,7 @@
 .skills-container {
   display: flex;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 250px;
   flex-direction: column;
 }
 .skills-container .skills-title {
@@ -322,6 +429,67 @@
   color: white;
 }
 
+.introduction-part2 {
+  display: inline-block;
+  overflow: hidden;
+  -webkit-animation: typing 3s steps(35, end), blink 0.5s step-end infinite alternate;
+          animation: typing 3s steps(35, end), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  border-right: 3px solid;
+  font-family: monospace;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.revealAbout {
+  position: relative;
+  transform: translateX(-1500px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.revealAbout.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 body {
   font-family: Century Gothic, Helvetica;
   padding-top: 70px;
@@ -329,6 +497,33 @@ body {
   overflow-x: hidden;
 }
 
+body.modal-open {
+  overflow: hidden;
+  -webkit-animation: animatetop 0.5s;
+          animation: animatetop 0.5s;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
 html {
   overflow-x: hidden;
 }

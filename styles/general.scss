@@ -1,6 +1,7 @@
 @use "header";
 @use "main";
 @use "footer";
+@use "animations";
 
 $fontstack1: Century Gothic, Helvetica;
 
@@ -11,6 +12,20 @@ body {
   overflow-x: hidden;
 }
 
+body.modal-open {
+  overflow: hidden;
+  animation: animatetop 0.5s;
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
 html {
   overflow-x: hidden;
 }

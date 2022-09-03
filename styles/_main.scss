@@ -17,7 +17,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 4vw; //45px;
+  font-size: 4vw;
   font-family: Poppins;
   text-align: center;
   font-style: italic;
@@ -25,7 +25,7 @@
 }
 
 .introduction-part2 {
-  font-size: 2vw; //25px;
+  font-size: 2vw;
   font-style: normal;
   font-family: Didact Gothic;
 }
@@ -69,7 +69,7 @@
   border: 1px solid black;
   @include shadows();
   border-radius: 5px;
-  transition: top ease 0.5s;
+  transition: top ease-in-out 1.5s;
 
   &:hover {
     top: -20px;
@@ -117,6 +117,102 @@
       }
     }
   }
+}
+
+.popup-container {
+  top: 140%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 25%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.projects-popup {
+  z-index: 200;
+  width: 800px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.popup-container.show {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity linear 0.5s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+  z-index: 200;
+}
+
+.popup-body {
+  width: 100%;
+  font-family: Poppins;
+  text-align: justify;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  border-top: 1px solid gray;
+  padding: 5px;
+
+  #github-icon-popup {
+    color: black;
+
+    &:hover {
+      color: rgb(99, 98, 98);
+    }
+  }
+
+  .popup-close.footer {
+    color: white;
+    background-color: rgb(99, 98, 98);
+    border-radius: 4px;
+    width: 60px;
+    &:hover {
+      background-color: rgba(99, 98, 98, 0.5);
+    }
+  }
+}
+
+.popup-header {
+  margin-bottom: 20px;
+  font-size: 25px;
+  height: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  margin-top: -15px;
+
+  .popup-close.header {
+    background-color: rgb(216, 59, 59);
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(216, 59, 59, 0.5);
+    }
+  }
+}
+
+.popup-images {
+  width: 100%;
+  height: 450px;
 }
 
 .quiz-img {
@@ -177,7 +273,7 @@
 .skills-container {
   display: flex;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 250px;
   flex-direction: column;
 
   .skills-title {

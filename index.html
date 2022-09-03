@@ -33,22 +33,22 @@
       <nav class="navbar">
         <div class="navbar-container">
           <div class="nav-right-section">
-            <div class="name-logo">Dorian Erhan</div>
+            <div class="name-logo" href="#intro">Dorian Erhan</div>
           </div>
           <div class="nav-left-section">
-            <div class="left-nav-icon">
+            <div class="left-nav-icon" id="projects-nav" href="#projects">
               <i id="rocket-icon" class="fa-solid fa-rocket"></i>
               <p>Projects</p>
             </div>
-            <div class="left-nav-icon">
+            <div class="left-nav-icon" id="about-nav" href="#about">
               <i id="user-icon" class="fa-solid fa-user"></i>
               <div>About</div>
             </div>
-            <div class="left-nav-icon">
+            <div class="left-nav-icon" id="skills-nav" href="#skills">
               <i id="chip-icon" class="fa-solid fa-microchip"></i>
               <div>Skills</div>
             </div>
-            <div class="left-nav-icon">
+            <div class="left-nav-icon" id="contacts-nav" href="#contacts">
               <i id="phone-icon" class="fa-solid fa-phone"></i>
               <div>Contacts</div>
             </div>
@@ -60,13 +60,17 @@
       <!-- Introduction section -->
       <section id="intro">
         <div class="background-container">
-          <img class="background" src="images/background.jpg" />
+          <img
+            class="background"
+            src="images/background.jpg"
+            alt="background"
+          />
           <div class="introduction-text">
             Hi! I'm Dorian.
             <br />
             <span class="introduction-part2">
-              I'm a Sofware Engineer who wants to leave a mark in this world, in
-              some way or another.</span
+              I'm a Sofware Engineer who wants to leave a mark in this
+              world.</span
             >
           </div>
         </div>
@@ -79,10 +83,79 @@
             I know this is looking quite empty, currently working on filling
             this section up &#128553;.
           </div>
+          <div id="popup-container" class="popup-container">
+            <div class="projects-popup">
+              <div class="popup-header">
+                <p class="popup-title">Quizzz</p>
+                <button class="popup-close header">X</button>
+              </div>
+              <div class="popup-body">
+                <p>
+                  Quizzz was developed during my first year degree at TU Delft.
+                  It was developed for a class named "OOP Project" and it was a
+                  group project made by me and 5 other students. It was my first
+                  large scale project, and it help me learn a lot of important
+                  tools, like version control and relational databases.
+                </p>
+                <img
+                  class="popup-images"
+                  src="images/quizzz/menu.png"
+                  alt="Game menu"
+                />
+                <h3>
+                  On our modern consumerist society, we constantly chase confort
+                  by spending without much though, because of this we are
+                  damaging the environment more than ever.
+                </h3>
+                <p>
+                  Thus, this game is a quiz game focused on raising awareness
+                  for our daily energy consumptions. The game can be played
+                  either in singleplayer or multiplayer, and it is made entirely
+                  in Java, using JavaFX for the GUI.
+                </p>
+                <p>
+                  The server side uses REST API calls for communication which is
+                  implemented with Spring Boot.
+                </p>
+                <img
+                  class="popup-images"
+                  src="images/quizzz/game2.png"
+                  alt="Game preview one"
+                />
+                <p>
+                  It has lots of features, including different question formats
+                  (multiple choice/short answer), powerups, leaderboards, game
+                  costumization, an endless mode, etc...
+                </p>
+                <p>
+                  Users can also contribute the the database of potential
+                  question, essential using CRUD operations in a H2 database.
+                </p>
+                <img
+                  class="popup-images"
+                  src="images/quizzz/game1.png"
+                  alt="Game preview two"
+                />
+                <div class="popup-footer">
+                  <a href="https://github.com/Erhan1706" target="_blank">
+                    <i
+                      id="github-icon-popup"
+                      class="fa-brands fa-github fa-3x"
+                    ></i>
+                  </a>
+                  <button class="popup-close footer">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="projects-flexbox">
-            <div class="quiz-container">
+            <div class="quiz-container reveal">
               <div>
-                <img class="quiz-img" src="images/quizzz.png" />
+                <img
+                  class="quiz-img"
+                  src="images/quizzz.png"
+                  alt="Quizz game"
+                />
               </div>
               <div class="quiz-description">
                 A quiz game aimed at raising awareness <br />
@@ -102,17 +175,22 @@
         </div>
       </section>
       <!-- About section -->
-      <section>
-        <div class="about-container">
+      <section id="about">
+        <div class="about-container revealAbout">
           <div class="about-left-section">
-            <img class="profile-pic" src="images/profile-picture.jpg" />
+            <img
+              class="profile-pic"
+              src="images/profile-picture.jpg"
+              alt="Profile picture"
+            />
           </div>
           <div class="about-right-section">
             <div class="about-me-title">About Me</div>
             <div class="about-me-text">
               I am a portuguese software engineer who is passionate about tech,
-              books and . I'm currently on my second year of my Computer Science
-              & Engineering degree, at the Technical University of Delft.
+              books and AI. I'm currently on my second year of my Computer
+              Science & Engineering degree, at the Technical University of
+              Delft.
               <br />
               <br />
               I am still relatively new to this field,
@@ -121,67 +199,83 @@
         </div>
       </section>
       <!-- Skills section -->
-      <section>
+      <section id="skills">
         <div class="skills-container">
           <div class="skills-title">Skills</div>
           <div class="skills-flexbox">
             <div class="skill-icon-container">
               <div class="skills-circle">
-                <img class="skills-image" src="images/java.png" />
+                <img class="skills-image" src="images/java.png" alt="java" />
               </div>
               <div class="skills-icon-title">Java</div>
             </div>
             <div class="skill-icon-container">
               <div class="skills-circle">
-                <img class="skills-image" src="images/js.png" />
+                <img
+                  class="skills-image"
+                  src="images/js.png"
+                  alt="JavaScript"
+                />
               </div>
               <div class="skills-icon-title">JavaScript</div>
             </div>
             <div class="skill-icon-container">
               <div class="skills-circle">
-                <img class="skills-image" src="images/html.png" />
+                <img class="skills-image" src="images/html.png" alt="HTML" />
               </div>
               <div class="skills-icon-title">HTML</div>
             </div>
             <div class="skill-icon-container">
               <div class="skills-circle">
-                <img class="skills-image" src="images/css.png" />
+                <img class="skills-image" src="images/css.png" alt="CSS/SASS" />
               </div>
               <div class="skills-icon-title">CSS/SASS</div>
             </div>
             <div class="skill-icon-container">
               <div class="skills-circle">
-                <img class="skills-image" src="images/spring.png" />
+                <img
+                  class="skills-image"
+                  src="images/spring.png"
+                  alt="spring"
+                />
               </div>
               <div class="skills-icon-title">Spring</div>
             </div>
             <div class="skill-icon-container">
               <div class="skills-circle">
-                <img class="skills-image" src="images/sql.png" />
+                <img class="skills-image" src="images/sql.png" alt="SQL" />
               </div>
               <div class="skills-icon-title">SQL</div>
             </div>
             <div class="skill-icon-container">
               <div class="skills-circle">
-                <img class="skills-image" src="images/ads.png" />
+                <img class="skills-image" src="images/ads.png" alt="Ads" />
               </div>
               <div class="skills-icon-title">Algorithms & Data Structures</div>
             </div>
             <div class="skill-icon-container">
               <div class="skills-circle">
-                <img class="skills-image" src="images/python.png" />
+                <img
+                  class="skills-image"
+                  src="images/python.png"
+                  alt="python"
+                />
               </div>
               <div class="skills-icon-title">Python</div>
             </div>
             <div class="skill-icon-container">
               <div class="skills-circle">
-                <img class="skills-image" src="images/database.png" />
+                <img
+                  class="skills-image"
+                  src="images/database.png"
+                  alt="Relational Databases"
+                />
               </div>
               <div class="skills-icon-title">Relational Databases</div>
             </div>
             <div class="skill-icon-container">
               <div class="skills-circle">
-                <img class="skills-image" src="images/c.png" />
+                <img class="skills-image" src="images/c.png" alt="C" />
               </div>
               <div class="skills-icon-title">C</div>
             </div>
@@ -190,38 +284,41 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer>
-      <div class="footer-container">
-        <div class="contacts-container">
-          <div class="contacts-icon-frame">
-            <div class="footer-icon-container">
-              <a href="https://github.com/Erhan1706" target="_blank">
-                <i id="github-icon" class="fa-brands fa-github fa-3x"></i>
-              </a>
-            </div>
-            <div class="footer-icon-container">
-              <a
-                href="https://www.linkedin.com/in/dorian-erhan-5834b3247/"
-                target="_blank"
-              >
-                <i id="linkedin-icon" class="fa-brands fa-linkedin fa-3x"></i>
-              </a>
-            </div>
-            <div class="footer-icon-container">
-              <i id="email-icon" class="fa-solid fa-envelope fa-3x"></i>
-            </div>
-            <div class="footer-icon-container">
-              <a href="" target="_blank">
-                <i id="twitter-icon" class="fa-brands fa-twitter fa-3x"></i>
-              </a>
+    <section id="contacts">
+      <footer>
+        <div class="footer-container">
+          <div class="contacts-container">
+            <div class="contacts-icon-frame">
+              <div class="footer-icon-container">
+                <a href="https://github.com/Erhan1706" target="_blank">
+                  <i id="github-icon" class="fa-brands fa-github fa-3x"></i>
+                </a>
+              </div>
+              <div class="footer-icon-container">
+                <a
+                  href="https://www.linkedin.com/in/dorian-erhan-5834b3247/"
+                  target="_blank"
+                >
+                  <i id="linkedin-icon" class="fa-brands fa-linkedin fa-3x"></i>
+                </a>
+              </div>
+              <div class="footer-icon-container">
+                <i id="email-icon" class="fa-solid fa-envelope fa-3x"></i>
+              </div>
+              <div class="footer-icon-container">
+                <a href="" target="_blank">
+                  <i id="twitter-icon" class="fa-brands fa-twitter fa-3x"></i>
+                </a>
+              </div>
             </div>
           </div>
+          <div class="clouds">&#9729; Chasing Clouds &#9729;</div>
+          <div class="copyright">
+            &copy; 2022 Dorian Erhan. All rights reserved.
+          </div>
         </div>
-        <div class="clouds">&#9729; Chasing Clouds &#9729;</div>
-        <div class="copyright">
-          &copy; 2022 Dorian Erhan. All rights reserved.
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </section>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

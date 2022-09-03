@@ -1,0 +1,45 @@
+.introduction-part2 {
+  display: inline-block;
+  overflow: hidden;
+  animation: typing 3s steps(35, end), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  border-right: 3px solid;
+  font-family: monospace;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.revealAbout {
+  position: relative;
+  transform: translateX(-1500px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.revealAbout.active {
+  transform: translateY(0);
+  opacity: 1;
+}
