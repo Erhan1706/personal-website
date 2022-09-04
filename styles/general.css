@@ -73,6 +73,10 @@ header nav div div div.name-logo.active {
   background-color: rgba(123, 123, 123, 0);
   color: white;
 }
+header nav div div div.name-logo.active:hover {
+  color: rgb(99, 98, 98);
+  transition: color 0.2s;
+}
 
 .background-container {
   position: relative;
@@ -186,18 +190,18 @@ header nav div div div.name-logo.active {
 }
 
 .popup-container {
-  top: 140%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 25%;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
   opacity: 0;
   pointer-events: none;
+  z-index: 2000;
+  overflow-x: hidden;
 }
 
 .projects-popup {
-  z-index: 200;
   width: 800px;
   border: 2px solid black;
   background-color: white;
@@ -206,6 +210,8 @@ header nav div div div.name-logo.active {
   justify-content: center;
   flex-direction: column;
   padding: 5px;
+  position: absolute;
+  right: 25%;
 }
 
 .popup-container.show {
@@ -216,6 +222,8 @@ header nav div div div.name-logo.active {
   overflow-y: auto;
   display: block;
   z-index: 200;
+  overflow: scroll;
+  box-sizing: border-box;
 }
 
 .popup-body {
@@ -497,33 +505,6 @@ body {
   overflow-x: hidden;
 }
 
-body.modal-open {
-  overflow: hidden;
-  -webkit-animation: animatetop 0.5s;
-          animation: animatetop 0.5s;
-}
-
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
 html {
   overflow-x: hidden;
 }

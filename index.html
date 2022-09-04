@@ -29,7 +29,69 @@
   </head>
   <body>
     <!-- Header/Navigation bar -->
-    <header class="header">
+    <div id="popup-container" class="popup-container">
+      <div class="projects-popup">
+        <div class="popup-header">
+          <p class="popup-title">Quizzz</p>
+          <button class="popup-close header">X</button>
+        </div>
+        <div class="popup-body">
+          <p>
+            Quizzz was developed during my first year degree at TU Delft. It was
+            developed for a class named "OOP Project" and it was a group project
+            made by me and 5 other students. It was my first large scale
+            project, and it help me learn a lot of important tools, like version
+            control and relational databases.
+          </p>
+          <img
+            class="popup-images"
+            src="images/quizzz/menu.png"
+            alt="Game menu"
+          />
+          <h3>
+            On our modern consumerist society, we constantly chase confort by
+            spending without much though, because of this we are damaging the
+            environment more than ever.
+          </h3>
+          <p>
+            Thus, this game is a quiz game focused on raising awareness for our
+            daily energy consumptions. The game can be played either in
+            singleplayer or multiplayer, and it is made entirely in Java, using
+            JavaFX for the GUI.
+          </p>
+          <p>
+            The server side uses REST API calls for communication which is
+            implemented with Spring Boot.
+          </p>
+          <img
+            class="popup-images"
+            src="images/quizzz/game2.png"
+            alt="Game preview one"
+          />
+          <p>
+            It has lots of features, including different question formats
+            (multiple choice/short answer), powerups, leaderboards, game
+            costumization, an endless mode, etc...
+          </p>
+          <p>
+            Users can also contribute the the database of potential question,
+            essential using CRUD operations in a H2 database.
+          </p>
+          <img
+            class="popup-images"
+            src="images/quizzz/game1.png"
+            alt="Game preview two"
+          />
+          <div class="popup-footer">
+            <a href="https://github.com/Erhan1706" target="_blank">
+              <i id="github-icon-popup" class="fa-brands fa-github fa-3x"></i>
+            </a>
+            <button class="popup-close footer">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="header" class="header">
       <nav class="navbar">
         <div class="navbar-container">
           <div class="nav-right-section">
@@ -56,7 +118,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main id="main">
       <!-- Introduction section -->
       <section id="intro">
         <div class="background-container">
@@ -82,71 +144,6 @@
           <div class="extra-info">
             I know this is looking quite empty, currently working on filling
             this section up &#128553;.
-          </div>
-          <div id="popup-container" class="popup-container">
-            <div class="projects-popup">
-              <div class="popup-header">
-                <p class="popup-title">Quizzz</p>
-                <button class="popup-close header">X</button>
-              </div>
-              <div class="popup-body">
-                <p>
-                  Quizzz was developed during my first year degree at TU Delft.
-                  It was developed for a class named "OOP Project" and it was a
-                  group project made by me and 5 other students. It was my first
-                  large scale project, and it help me learn a lot of important
-                  tools, like version control and relational databases.
-                </p>
-                <img
-                  class="popup-images"
-                  src="images/quizzz/menu.png"
-                  alt="Game menu"
-                />
-                <h3>
-                  On our modern consumerist society, we constantly chase confort
-                  by spending without much though, because of this we are
-                  damaging the environment more than ever.
-                </h3>
-                <p>
-                  Thus, this game is a quiz game focused on raising awareness
-                  for our daily energy consumptions. The game can be played
-                  either in singleplayer or multiplayer, and it is made entirely
-                  in Java, using JavaFX for the GUI.
-                </p>
-                <p>
-                  The server side uses REST API calls for communication which is
-                  implemented with Spring Boot.
-                </p>
-                <img
-                  class="popup-images"
-                  src="images/quizzz/game2.png"
-                  alt="Game preview one"
-                />
-                <p>
-                  It has lots of features, including different question formats
-                  (multiple choice/short answer), powerups, leaderboards, game
-                  costumization, an endless mode, etc...
-                </p>
-                <p>
-                  Users can also contribute the the database of potential
-                  question, essential using CRUD operations in a H2 database.
-                </p>
-                <img
-                  class="popup-images"
-                  src="images/quizzz/game1.png"
-                  alt="Game preview two"
-                />
-                <div class="popup-footer">
-                  <a href="https://github.com/Erhan1706" target="_blank">
-                    <i
-                      id="github-icon-popup"
-                      class="fa-brands fa-github fa-3x"
-                    ></i>
-                  </a>
-                  <button class="popup-close footer">Close</button>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="projects-flexbox">
             <div class="quiz-container reveal">
@@ -189,11 +186,15 @@
             <div class="about-me-text">
               I am a portuguese software engineer who is passionate about tech,
               books and AI. I'm currently on my second year of my Computer
-              Science & Engineering degree, at the Technical University of
-              Delft.
+              Science & Engineering degree, at the Technical University of Delft
+              in the Netherlands.
               <br />
               <br />
-              I am still relatively new to this field,
+              I am dedicated to continuously learn and I am interested in any
+              experiences that improve my knowledge and experience in this
+              field. I am also an ambitious problem-solver, in fact, nothing
+              feels better than finding that pesky error after a 2 hour
+              debugging session.
             </div>
           </div>
         </div>
@@ -303,7 +304,9 @@
                 </a>
               </div>
               <div class="footer-icon-container">
-                <i id="email-icon" class="fa-solid fa-envelope fa-3x"></i>
+                <a href="mailto:dorian.erhan@gmail.com" target="_blank">
+                  <i id="email-icon" class="fa-solid fa-envelope fa-3x"></i>
+                </a>
               </div>
               <div class="footer-icon-container">
                 <a href="" target="_blank">

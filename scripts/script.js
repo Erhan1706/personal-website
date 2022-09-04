@@ -89,7 +89,13 @@ window.onscroll = () => {
 const learnButton = document.getElementsByClassName("learn-more-button");
 learnButton[0].addEventListener("click", () => {
   document.getElementById("popup-container").classList.add("show");
-  document.body.classList.add("modal-open");
+  document.getElementById("popup-container").style.display = "block";
+  document.body.style.overflow = "hidden";
+
+  document.getElementById("main").style.filter = "blur(5px)";
+  document.getElementById("header").style.filter = "blur(5px)";
+  //document.body.classList.add("modal-open");
+  //document.body.style.top = `-1400px`;
 });
 
 //Closing the popup
@@ -100,7 +106,8 @@ console.log(typeof closeButtons);
 Array.prototype.forEach.call(closeButtons, function (closeButtons) {
   closeButtons.addEventListener("click", () => {
     document.getElementById("popup-container").classList.remove("show");
+    document.body.style.overflow = "auto";
+    document.getElementById("main").style.filter = "none";
+    document.getElementById("header").style.filter = "none";
   });
 });
-
-console.log(typeof closeButtons);

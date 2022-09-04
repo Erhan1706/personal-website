@@ -85,4 +85,8 @@ header nav div div div.active {
 header nav div div div.name-logo.active {
   background-color: rgba(123, 123, 123, 0);
   color: white;
+  &:hover {
+    color: rgb(99, 98, 98);
+    transition: color 0.2s;
+  }
 }
